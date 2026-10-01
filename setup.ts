@@ -91,8 +91,8 @@ makeCodeMan.fx = 350
 makeCodeMan.fy = 350
 
 const healthBar: Sprite[] = []
-let maxHp = 4
-let hp = 4
+let maxHp = 5
+let hp = 5
 let hpText = fancyText.create("HP:")
 hpText.setPosition(12, 12)
 for (let i = 1; i <= 5; i++) {
