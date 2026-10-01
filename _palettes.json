@@ -1,0 +1,28 @@
+{
+    "nextPaletteID": 1,
+    "palettes": {
+        "custom0": {
+            "id": "custom0",
+            "name": "BumbleBit",
+            "colors": [
+                "#000000",
+                "#272946",
+                "#EDA031",
+                "#E7FFEE",
+                "#E7FFEE",
+                "#E7FFEE",
+                "#E7FFEE",
+                "#E7FFEE",
+                "#E7FFEE",
+                "#E7FFEE",
+                "#E7FFEE",
+                "#E7FFEE",
+                "#E7FFEE",
+                "#E7FFEE",
+                "#E7FFEE",
+                "#E7FFEE"
+            ],
+            "custom": true
+        }
+    }
+}

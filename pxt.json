@@ -1,0 +1,53 @@
+{
+    "name": "Scratcher's Fury",
+    "description": "",
+    "dependencies": {
+        "device": "*",
+        "arcade-sprite-util": "github:jwunderl/arcade-sprite-util#v0.6.0",
+        "arcade-fancy-text": "github:riknoll/arcade-fancy-text#v0.2.2",
+        "arcade-piano-roll": "github:microsoft/arcade-piano-roll#v0.0.1",
+        "sprite-fx": "github:kohanmathers/makecodespritefx#v1.3.0",
+        "arcade-character-animations": "github:microsoft/arcade-character-animations#v0.1.0",
+        "browser-events": "*",
+        "ScriptScript Round (font)": "pub:59084-52511-53580-97290"
+    },
+    "files": [
+        "main.ts",
+        "README.md",
+        "assets.json",
+        "images.g.jres",
+        "images.g.ts",
+        "setup.ts",
+        "functions.ts",
+        "classes.ts"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "targetVersions": {
+        "target": "4.1.25",
+        "targetId": "arcade"
+    },
+    "supportedTargets": [
+        "arcade"
+    ],
+    "preferredEditor": "tsprj",
+    "palette": [
+        "#000000",
+        "#272946",
+        "#EDA031",
+        "#E7FFEE",
+        "#E7FFEE",
+        "#E7FFEE",
+        "#E7FFEE",
+        "#E7FFEE",
+        "#E7FFEE",
+        "#E7FFEE",
+        "#E7FFEE",
+        "#E7FFEE",
+        "#E7FFEE",
+        "#E7FFEE",
+        "#E7FFEE",
+        "#E7FFEE"
+    ]
+}
