@@ -30,11 +30,11 @@ game.onUpdate (function() {
                 } else if (enemy == enemyTypes.proj) {
                     let newEnemy = new ProjEnemy
                 } else if (enemy == enemyTypes.tankyNormal) {
-                    let newEnemy = new NormalEnemy
+                    let newEnemy = new TankyNormalEnemy
                 } else if (enemy == enemyTypes.tankyFast) {
-                    let newEnemy = new NormalEnemy
+                    let newEnemy = new TankyFastEnemy
                 } else if (enemy == enemyTypes.tankyProj) {
-                    let newEnemy = new NormalEnemy
+                    let newEnemy = new TankyProjEnemy
                 }
             spawnTimer = spawnTimerMax
             }
@@ -50,7 +50,7 @@ game.onUpdate (function() {
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function(sprite: Sprite, otherSprite: Sprite) {
     hp -= 1
     if (hp <= 0) {
-        game.setGameOverMessage(true, "It's over for MakeCode Man...")
+        game.setGameOverMessage(false, "It's over for MakeCode Man...")
         game.gameOver(false)
     }
     healthBar[hp].setImage(assets.image`healthEmpty`)
@@ -145,5 +145,13 @@ browserEvents.MouseRight.onEvent(browserEvents.MouseButtonEvent.Released, functi
         for (let sprite of sprites.allOfKind(SpriteKind.Projectile)) {
             sprites.destroy(sprite)
         }
+    }
+})
+
+controller.menu.onEvent(ControllerButtonEvent.Pressed, function() {
+    if (game.stats == true) {
+        game.stats = false
+    } else {
+        game.stats = true
     }
 })

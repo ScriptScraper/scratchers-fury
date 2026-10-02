@@ -131,6 +131,9 @@ function startWave() {
     tankyFastCount += 0.5
     tankyProjCount += 1
 
+    waveText.setText("Wave: " + wave)
+    waveText.setPosition(240, 184)
+
     if (normalCount > 0) {
         for (let i = 0; i < Math.round(normalCount); i++) {
             enemies.push(enemyTypes.normal)
@@ -164,6 +167,7 @@ function startWave() {
 }
 
 function endWave() {
+    if (wave + 1 == 31) { game.setGameOverMessage(true, "Another day saved!"); game.gameOver(true) }
     if (wave % 5 == 0) {
         let upgrades = upgradePollEpic.slice()
         if (melee == 0) { upgrades.splice(upgrades.indexOf(7), 6); upgrades.splice(upgrades.indexOf(10), 6) }
@@ -190,7 +194,7 @@ function endWave() {
                     "Scorch the Sun: lasers do much more damage!", assets.image`rangedBuffIcon`); break
                 case 3: newUpgrade = new Upgrade(0, 0, 0, 0, 9, 0, 0, melee, ranged, i * 85 - 42,
                     "Full-Auto: lasers fire way faster!", assets.image`rangedBuffIcon`); break
-                case 4: newUpgrade = new Upgrade(0, 0, 30, 0, 0, 30, 0, melee, ranged, i * 85 - 42,
+                case 4: newUpgrade = new Upgrade(0, 0, 45, 0, 0, 45, 0, melee, ranged, i * 85 - 42,
                     "Hyperdensity: all attacks have much more knockback!",assets.image`bothBuffIcon`); break
                 case 5: newUpgrade = new Upgrade(0, 0, 0, 0, 0, 0, 3, melee, ranged, i * 85 - 42,
                     "Full Jigsaw: increase max health by 3, and heal 6!", assets.image`healthBuffIcon`); break
@@ -227,13 +231,13 @@ function endWave() {
                     "Strength: punches deal more damage.", assets.image`meleeBuffIcon`); break
                 case 1: newUpgrade = new Upgrade(0, 3, 0, 0, 0, 0, 0, melee, ranged, i * 85 - 42,
                     "Rage: increases punch attack speed.", assets.image`meleeBuffIcon`); break
-                case 2: newUpgrade = new Upgrade(0, 0, 10, 0, 0, 0, 0, melee, ranged, i * 85 - 42,
+                case 2: newUpgrade = new Upgrade(0, 0, 15, 0, 0, 0, 0, melee, ranged, i * 85 - 42,
                     "Heavy Hit: punches have more knockback.", assets.image`meleeBuffIcon`); break
                 case 3: newUpgrade = new Upgrade(0, 0, 0, 6, 0, 0, 0, melee, ranged, i * 85 - 42,
                     "Focused Beams: lasers deal more damage", assets.image`rangedBuffIcon`); break
                 case 4: newUpgrade = new Upgrade(0, 0, 0, 0, 3, 0, 0, melee, ranged, i * 85 - 42,
                     "Happy Trigger: lasers fire faster.", assets.image`rangedBuffIcon`); break
-                case 5: newUpgrade = new Upgrade(0, 0, 0, 0, 0, 10, 0, melee, ranged, i * 85 - 42,
+                case 5: newUpgrade = new Upgrade(0, 0, 0, 0, 0, 15, 0, melee, ranged, i * 85 - 42,
                     "Dense Light: lasers have more knockback.", assets.image`rangedBuffIcon`); break
                 case 6: newUpgrade = new Upgrade(0, 0, 0, 0, 0, 0, 1, melee, ranged, i * 85 - 42,
                     "Piece of the Puzzle: increase max health by 1 and heal 2.", assets.image`healthBuffIcon`); break

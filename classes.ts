@@ -69,7 +69,7 @@ class Punch extends sprites.ExtendableSprite {
 
 class DefaultPunch extends Punch {
     constructor() {
-        super(15, 110, assets.animation`punchDefaultL`, assets.animation`punchDefultR`)
+        super(15, 125, assets.animation`punchDefaultL`, assets.animation`punchDefultR`)
     }
 }
 
@@ -81,19 +81,19 @@ class IronFist extends Punch {
 
 class Thunderclap extends Punch {
     constructor() {
-        super(60, 200, assets.animation`thunderclap`, assets.animation`thunderclap`)
+        super(65, 200, assets.animation`thunderclap`, assets.animation`thunderclap`)
     }
 }
 
 class NeedleArm extends Punch {
     constructor() {
-        super(40, 150, assets.animation`needleArmL`, assets.animation`needleArmR`)
+        super(45, 150, assets.animation`needleArmL`, assets.animation`needleArmR`)
     }
 }
 
 class ExplodeOPunch extends Punch {
     constructor() {
-        super(15, 110, assets.animation`explodeOPunchL`, assets.animation`explodeOPunchR`)
+        super(15, 125, assets.animation`explodeOPunchL`, assets.animation`explodeOPunchR`)
     }
     effect(enemy: Sprite) {
         if (Math.percentChance(50)) {
@@ -105,7 +105,7 @@ class ExplodeOPunch extends Punch {
 
 class ClusterBlast extends Punch {
     constructor() {
-        super(20, 120, assets.animation`clusterBlastL`, assets.animation`clusterBlastR`)
+        super(20, 135, assets.animation`clusterBlastL`, assets.animation`clusterBlastR`)
     }
     effect(enemy: Sprite) {
         if (Math.percentChance(65)) {
@@ -403,20 +403,20 @@ class Enemy extends sprites.ExtendableSprite {
 
 class NormalEnemy extends Enemy {
     constructor() {
-        super(85, randint(6, 12), randint(25, 30), 1, assets.animation`enemyNormal`, assets.animation`enemyNormalDeath`)
+        super(80, randint(6, 12), randint(25, 30), 1, assets.animation`enemyNormal`, assets.animation`enemyNormalDeath`)
     }
 }
 
 class FastEnemy extends Enemy {
     constructor() {
-        super(45, randint(8, 16), randint(70, 80), 2.5, assets.animation`enemyFast`, assets.animation`enemyFastDeath`)
+        super(40, randint(8, 16), randint(70, 80), 2.5, assets.animation`enemyFast`, assets.animation`enemyFastDeath`)
     }
 }
 
 class ProjEnemy extends Enemy {
     timer: number
     constructor() {
-        super(85, randint(4, 8), randint(15, 20), 1, assets.animation`enemyProj`, assets.animation`enemyProjDeath`)
+        super(80, randint(4, 8), randint(15, 20), 1, assets.animation`enemyProj`, assets.animation`enemyProjDeath`)
         this.timer = 150
     }
     behavior() {
@@ -436,20 +436,20 @@ class ProjEnemy extends Enemy {
 
 class TankyNormalEnemy extends Enemy {
     constructor() {
-        super(235, randint(4, 8), randint(15, 20), 0.6, assets.animation`enemyTankyNormal`, assets.animation`enemyTankyNormalDeath`)
+        super(230, randint(4, 8), randint(15, 20), 0.7, assets.animation`enemyTankyNormal`, assets.animation`enemyTankyNormalDeath`)
     }
 }
 
 class TankyFastEnemy extends Enemy {
     constructor() {
-        super(90, randint(6, 12), randint(55, 65), 2, assets.animation`enemyTankyFast`, assets.animation`enemyFastDeath`)
+        super(90, randint(6, 12), randint(55, 65), 1.5, assets.animation`enemyTankyFast`, assets.animation`enemyFastDeath`)
     }
 }
 
 class TankyProjEnemy extends Enemy {
     timer: number
     constructor() {
-        super(235, randint(3, 6), randint(10, 15), 1, assets.animation`enemyTankyProj`, assets.animation`enemyTankyProjDeath`)
+        super(230, randint(3, 6), randint(10, 15), 0.7, assets.animation`enemyTankyProj`, assets.animation`enemyTankyProjDeath`)
         this.timer = 150
     }
     behavior() {

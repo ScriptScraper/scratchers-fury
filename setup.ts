@@ -72,7 +72,6 @@ const animations = [
 
 scene.setBackgroundImage(assets.image`background`)
 browserEvents.setCursorVisible(false)
-game.stats = true
 
 const cursor = sprites.create(assets.image`cursor`, SpriteKind.Null)
 let currentAnimation = assets.animation`idleR1`
@@ -91,11 +90,11 @@ makeCodeMan.fx = 350
 makeCodeMan.fy = 350
 
 const healthBar: Sprite[] = []
-let maxHp = 5
-let hp = 5
+let maxHp = 6
+let hp = maxHp
 let hpText = fancyText.create("HP:")
 hpText.setPosition(12, 12)
-for (let i = 1; i <= 5; i++) {
+for (let i = 1; i <= maxHp; i++) {
     let hitPoint = sprites.create(assets.image`healthFull`, SpriteKind.Null)
     hitPoint.setPosition(i * 18 + 12, 12)
     hitPoint.z = 999
@@ -140,3 +139,6 @@ let tankyProjCount = -24
 
 let upgradePoolNormal = [0, 1, 2, 3, 4, 5, 6]
 let upgradePollEpic = [0, 1, 2, 3, 4, 5, 6, 6, 6, 7, 7, 7, 8, 8, 8, 9, 9, 9, 10, 10, 10, 11, 11, 11, 12, 12, 12, 12, 12, 12, 13, 13, 13, 14, 14, 14]
+let waveText = fancyText.create("Wave: " + wave, 0, 1, customFont.ScriptScript_Round)
+waveText.setPosition(240, 184)
+waveText.z = 500
